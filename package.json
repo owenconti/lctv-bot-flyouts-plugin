@@ -1,0 +1,11 @@
+{
+  "name": "lctv-bot-flyouts-plugin",
+  "version": "1.0.0",
+  "description": "Flyouts plugin for the LCTV Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Owen Conti <owen@ohseemedia.com>",
+  "license": "ISC"
+}
