@@ -1,0 +1,21 @@
+{
+    "flyouts" : [{
+        "command" : "#doge",
+        "image" : "doge.png",
+        "animation" : "fly-left"
+    }, {
+        "command" : "#test",
+        "image" : "doge.png",
+        "animation" : "fly-bottom"
+    }, {
+        "command" : "#scale",
+        "image" : "doge.png",
+        "animation" : "scale",
+        "template" : "{{username}} followed the stream"
+    }, {
+        "command" : "#fade",
+        "image" : "doge.png",
+        "animation" : "fade",
+        "template" : "Thanks for the follow!"
+    }]
+}
