@@ -44,6 +44,11 @@ module.exports = {
             }
 		} );
 
+        /**
+         * Fades the image in
+         * @param  {jQuery object} $img
+         * @return {void}
+         */
         function fade( $img ) {
             $img.css({
                 left: 'auto',
@@ -60,6 +65,11 @@ module.exports = {
             } );
         }
 
+        /**
+         * Scales the image from 0% to 100%
+         * @param  {jQuery object} $img
+         * @return {void}
+         */
         function scale( $img ) {
             $img.css({
                 left: 'auto',
@@ -88,6 +98,11 @@ module.exports = {
             });
         }
 
+        /**
+         * Fly in the image from the left
+         * @param  {jQuery object} $img
+         * @return {void}
+         */
         function flyLeft( $img ) {
             $img.css({
                 left: '-100%',
@@ -104,6 +119,11 @@ module.exports = {
             } );
         }
 
+        /**
+         * Fly in the image from the right
+         * @param  {jQuery object} $img
+         * @return {void}
+         */
         function flyRight( $img ) {
             $img.css({
                 right: '-100%',
@@ -120,6 +140,11 @@ module.exports = {
             } );
         }
 
+        /**
+         * Fly in the image from the top
+         * @param  {jQuery object} $img
+         * @return {void}
+         */
         function flyTop( $img ) {
             $img.css({
                 top: '-100%',
