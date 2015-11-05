@@ -6,7 +6,7 @@ module.exports = {
 		name: 'velocity',
 		url: '//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js'
 	}],
-	html: '<img src="" id="flyout" style="display: block; position: absolute;" />',
+	html: '<div id="flyout" style="display: block; position: absolute;" />',
 	func: function( socket, username ) {
         // Container CSS for the flyouts image tag
         var $flyoutDiv = $('#flyouts');
@@ -19,66 +19,86 @@ module.exports = {
         });
 
 		registerSocketMessage( 'flyout', function( messageObj ) {
-			var $img = $('img#flyout');
-			$img.attr('src', 'data:image/png;base64,' + messageObj.image);
+			var $div = $('div#flyout');
+            var duration = messageObj.duration || 5000;
+
+            if ( messageObj.type === 'image' ) {
+                var $content = $( '<img />', {
+                    src: 'data:image/png;base64,' + messageObj.content
+                });
+            } else if ( messageObj.type === 'div' ) {
+                var $content = $( messageObj.content );
+            }
+            $div.html( $content );
 
             switch( messageObj.animation ) {
                 case 'fade':
-                    fade( $img );
+                    fade( $div, duration );
                     break;
                 case 'scale':
-                    scale( $img );
+                    scale( $div, duration );
                     break;
                 case 'fly-bottom':
-                    flyBottom( $img );
+                    flyBottom( $div, duration );
                     break;
                 case 'fly-left':
-                    flyLeft( $img );
+                    flyLeft( $div, duration );
                     break;
                 case 'fly-top':
-                    flyTop( $img );
+                    flyTop( $div, duration );
                     break;
                 case 'fly-right':
-                    flyRight( $img );
+                    flyRight( $div, duration );
+                    break;
+                default:
+                    // If the animation doesn't exist,
+                    // don't show the image.
+                    $div.css({
+                        left: 'auto',
+                        right: 'auto',
+                        top: 'auto',
+                        bottom: 'auto',
+                        opacity: 0
+                    });
                     break;
             }
 		} );
 
         /**
          * Fades the image in
-         * @param  {jQuery object} $img
+         * @param  {jQuery object} $div
          * @return {void}
          */
-        function fade( $img ) {
-            $img.css({
-                left: 'auto',
+        function fade( $div, duration ) {
+            $div.css({
+                left: 50,
                 right: 'auto',
                 top: 'auto',
-                bottom: 'auto',
+                bottom: 50,
                 opacity: 0
             });
-            $img.velocity( {
+            $div.velocity( {
                 opacity: 1
             } );
-            $img.velocity( "reverse", {
-                delay: 5000
+            $div.velocity( "reverse", {
+                delay: duration
             } );
         }
 
         /**
          * Scales the image from 0% to 100%
-         * @param  {jQuery object} $img
+         * @param  {jQuery object} $div
          * @return {void}
          */
-        function scale( $img ) {
-            $img.css({
-                left: 'auto',
+        function scale( $div, duration ) {
+            $div.css({
+                left: 50,
                 right: 'auto',
                 top: 'auto',
-                bottom: 'auto',
+                bottom: 50,
                 opacity: 1
             });
-            $img.velocity({
+            $div.velocity({
                 scale: 0
             }, {
                 duration: 1
@@ -86,10 +106,10 @@ module.exports = {
                 scale: 1,
             } );
 
-            $img.velocity( {
+            $div.velocity( {
                 scale: 0
             }, {
-                delay: 5000
+                delay: duration
             } ).velocity({
                 scale: 1,
                 opacity: 0
@@ -100,85 +120,85 @@ module.exports = {
 
         /**
          * Fly in the image from the left
-         * @param  {jQuery object} $img
+         * @param  {jQuery object} $div
          * @return {void}
          */
-        function flyLeft( $img ) {
-            $img.css({
-                left: '-100%',
+        function flyLeft( $div, duration ) {
+            $div.css({
+                left: '-150%',
                 right: 'auto',
                 top: 'auto',
-                bottom: 'auto',
+                bottom: 50,
                 opacity: 1
             });
-            $img.velocity( {
-                left: '0'
+            $div.velocity( {
+                left: 50
             } );
-            $img.velocity( "reverse", {
-                delay: 5000
+            $div.velocity( "reverse", {
+                delay: duration
             } );
         }
 
         /**
          * Fly in the image from the right
-         * @param  {jQuery object} $img
+         * @param  {jQuery object} $div
          * @return {void}
          */
-        function flyRight( $img ) {
-            $img.css({
+        function flyRight( $div, duration ) {
+            $div.css({
                 right: '-100%',
-                bottom: 'auto',
+                bottom: 50,
                 top: 'auto',
                 left: 'auto',
                 opacity: 1
             });
-            $img.velocity( {
-                right: '0'
+            $div.velocity( {
+                right: 50
             } );
-            $img.velocity( "reverse", {
-                delay: 5000
+            $div.velocity( "reverse", {
+                delay: duration
             } );
         }
 
         /**
          * Fly in the image from the top
-         * @param  {jQuery object} $img
+         * @param  {jQuery object} $div
          * @return {void}
          */
-        function flyTop( $img ) {
-            $img.css({
+        function flyTop( $div, duration ) {
+            $div.css({
                 top: '-100%',
                 right: 'auto',
                 bottom: 'auto',
-                left: 'auto',
+                left: 50,
                 opacity: 1
             });
-            $img.velocity( {
+            $div.velocity( {
                 top: '0'
             } );
-            $img.velocity( "reverse", {
-                delay: 5000
+            $div.velocity( "reverse", {
+                delay: duration
             } );
         }
 
         /**
          * Fly in from the bottom
-         * @param  {jQuery Object} $img
+         * @param  {jQuery Object} $div
          * @return {void}
          */
-        function flyBottom( $img ) {
-            $img.css({
-                bottom: '-100%',
+        function flyBottom( $div, duration ) {
+            $div.css({
+                bottom: '-150%',
                 right: 'auto',
                 top: 'auto',
-                left: 'auto',
+                left: 50,
                 opacity: 1
             });
-            $img.velocity( {
-                bottom: '0'
+            $div.velocity( {
+                bottom: 50
             } );
-            $img.velocity( "reverse", {
-                delay: 5000
+            $div.velocity( "reverse", {
+                delay: duration
             } );
         }
 	}

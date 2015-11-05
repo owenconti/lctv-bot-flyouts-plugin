@@ -15,7 +15,8 @@ module.exports = [{
                 Assets.load( flyout.image, function(base64Image) {
                 	Websocket.sendMessage( chat.credentials.room, {
                 		message: 'flyout',
-                		image: base64Image,
+                        type: 'image',
+                		content: base64Image,
                         animation: flyout.animation
                 	});
                 });
