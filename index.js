@@ -9,9 +9,10 @@ module.exports = [{
     ignoreRateLimiting: true,
     action: function( chat, stanza ) {
         const flyouts = pluginSettings.flyouts;
+        const lowerCaseMessage = stanza.message.toLowerCase();
 
         flyouts.forEach( (flyout) => {
-            if ( stanza.message.indexOf( flyout.command ) >= 0 ) {
+            if ( lowerCaseMessage.indexOf( flyout.command.toLowerCase() ) >= 0 ) {
                 Assets.load( flyout.image, function(base64Image) {
                 	Websocket.sendMessage( chat.credentials.room, {
                 		message: 'flyout',
