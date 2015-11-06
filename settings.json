@@ -2,11 +2,11 @@
     "flyouts" : [{
         "command" : "#doge",
         "image" : "doge.png",
-        "animation" : "fly-left"
+        "animation" : "flyLeft"
     }, {
         "command" : "#test",
         "image" : "doge.png",
-        "animation" : "fly-bottom"
+        "animation" : "flyBottom"
     }, {
         "command" : "#scale",
         "image" : "doge.png",
