@@ -70,7 +70,8 @@ module.exports = {
                     var $content = null;
                     if ( messageObj.type === 'image' ) {
                         $content = $( '<img />', {
-                            src: 'data:image/png;base64,' + messageObj.content
+                            src: 'data:image/png;base64,' + messageObj.content,
+                            style: 'max-width: 100%;'
                         });
                     } else if ( messageObj.type === 'div' ) {
                         $content = $( messageObj.content );

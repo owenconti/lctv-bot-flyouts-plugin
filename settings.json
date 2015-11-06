@@ -17,5 +17,18 @@
         "image" : "doge.png",
         "animation" : "fade",
         "template" : "Thanks for the follow!"
+    }, {
+        "command" : ["pussy", "cat", "kitty", "kitteh", "kitten", "kat", "fluffy"],
+        "image" : "cat.png",
+        "animation" : "scale",
+        "duration" : 2500
+    }, {
+        "command": "internet",
+        "url" : "http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg",
+        "animation" : "fade"
+    }, {
+        "command": ["unicorn", "dude", "troll", "rick", "roll"],
+        "url" : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/005/07d/03a/2a4ed64.jpg",
+        "animation" : "scale"
     }]
 }
