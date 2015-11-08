@@ -1,22 +1,8 @@
 {
     "flyouts" : [{
-        "command" : "#doge",
+        "command" : "doge",
         "image" : "doge.png",
         "animation" : "flyLeft"
-    }, {
-        "command" : "#test",
-        "image" : "doge.png",
-        "animation" : "flyBottom"
-    }, {
-        "command" : "#scale",
-        "image" : "doge.png",
-        "animation" : "scale",
-        "template" : "{{username}} followed the stream"
-    }, {
-        "command" : "#fade",
-        "image" : "doge.png",
-        "animation" : "fade",
-        "template" : "Thanks for the follow!"
     }, {
         "command" : ["pussy", "cat", "kitty", "kitteh", "kitten", "kat", "fluffy"],
         "image" : "cat.png",
@@ -27,8 +13,68 @@
         "url" : "http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/cat.jpg",
         "animation" : "fade"
     }, {
-        "command": ["unicorn", "dude", "troll", "rick", "roll"],
+        "command": ["unicorn", "dude", "troll", "rick roll", "dick", "ascii", "agar"],
         "url" : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/005/07d/03a/2a4ed64.jpg",
         "animation" : "scale"
+    }, {
+        "command" : ["nyan", "cat"],
+        "url" : "http://4.bp.blogspot.com/-KGR4f81vtzE/T1l0F6CYFpI/AAAAAAAAAYI/J_Z_sJg-xdE/s1600/nyan_cat_wallpaper_by_nyakiru-d3e1zfl.png",
+        "animation" : "flyLeft"
+    }, {
+        "command" : "ohshit",
+        "url" : "http://media.giphy.com/media/5xtDarudT3pJKPXQ9lm/giphy.gif",
+        "animation" : "flyLeft"
+    }, {
+        "command" : "taco",
+        "url" : "http://img.pandawhale.com/146054-infinite-tacos-perfect-loop-gi-Mjx8.gif",
+        "animation" : "scale"
+    }, {
+        "command" : "nyan taco",
+        "url" : "https://media.giphy.com/media/fVAerA7bPKXRu/giphy.gif",
+        "animation" : "fade"
+    }, {
+        "command" : "money",
+        "url" : "http://media.giphy.com/media/yoJC2P8Z6mpsMLKcEw/giphy.gif",
+        "animation" : "flyLeft"
+    }, {
+        "command" : "banana",
+        "url" : "http://www.kizoa.com/img/e8nZC.gif",
+        "animation" : "scale"
+    }, {
+        "command" : "camwhite",
+        "url" : "https://38.media.tumblr.com/0e752b38e4af4b3c557234cfb8cfbbb7/tumblr_mvjbcjbray1s544lxo1_r1_500.gif",
+        "animation" : "fade"
+    }, {
+        "command" : "pounce",
+        "url" : "https://lh3.googleusercontent.com/-A7scT2XsLfc/VgWXneXCKFI/AAAAAAAAVpE/mDsWOpnMBEY/w400-h210/funny-gif-cat-moving-body-cool.gif",
+        "animation" : "flyTop"
+    }, {
+        "command" : "xmetrix",
+        "url" : "https://i.ytimg.com/vi/w7upQHYD_ro/hqdefault.jpg",
+        "animation" : "scale"
+    }, {
+        "command" : "rick",
+        "url" : "http://media.npr.org/assets/img/2014/10/16/rick-astley_wide-dc1e7706e2919400c0ccb65e779f446aef493c06.jpg?s=1400",
+        "animation" : "fade"
+    }, {
+        "command" : "dodge",
+        "url" : "http://gifmansion.com/GM/uploads/2012/07/highschoolofthedeadshot.gif",
+        "animation" : "flyRight"
+    }, {
+        "command" : "ca2",
+        "url" : "http://snag.gy/V6dgT.jpg",
+        "animation" : "flyBottom"
+    }, {
+        "command" : "doit",
+        "url" : "https://media.giphy.com/media/wErJXg1tIgHXG/giphy.gif",
+        "animation" : "scale"
+    }, {
+        "command" : ["windows", "windows10", "win10"],
+        "url" : "https://s3.amazonaws.com/rapgenius/poop.png",
+        "animation" : "scale"
+    }, {
+        "command" : "swirl",
+        "url" : "https://s3.amazonaws.com/rapgenius/poop.png",
+        "animation" : "swirl"
     }]
 }

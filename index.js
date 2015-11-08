@@ -39,7 +39,7 @@ module.exports = [{
             // Look for a match in the message
             let match = false;
             flyoutCommands.forEach( ( commandString ) => {
-                if ( lowerCaseMessage.indexOf( commandString.toLowerCase() ) >= 0 ) {
+                if ( lowerCaseMessage === commandString.toLowerCase() ) {
                     match = true;
                 }
             } );

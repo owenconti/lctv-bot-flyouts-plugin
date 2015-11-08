@@ -152,6 +152,38 @@ module.exports = {
                 });
             },
 
+            swirl: function( $div, duration, callback ) {
+                $div.css({
+                    left: 50,
+                    right: 'auto',
+                    top: 'auto',
+                    bottom: 50,
+                    opacity: 0
+                });
+                $div.velocity({
+                    scale: 0,
+                    opacity: 1
+                }, {
+                    duration: 1
+                }).velocity( {
+                    scale: 1,
+                    rotateZ: 1080
+                } );
+
+                $div.velocity( {
+                    scale: 0,
+                    rotateZ: 0
+                }, {
+                    delay: duration
+                }).velocity({
+                    scale: 1,
+                    opacity: 0
+                }, {
+                    duration: 1,
+                    complete: callback
+                });
+            },
+
             /**
              * Fly in the image from the left
              */
