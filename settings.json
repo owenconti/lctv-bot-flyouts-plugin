@@ -76,5 +76,9 @@
         "command" : "swirl",
         "url" : "https://s3.amazonaws.com/rapgenius/poop.png",
         "animation" : "swirl"
+    }, {
+        "command" : "fuck",
+        "url" : "https://pbs.twimg.com/profile_images/653991354708721664/1FZ6WMpi.jpg",
+        "animation" : "fade"
     }]
 }

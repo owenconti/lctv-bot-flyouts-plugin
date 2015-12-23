@@ -13,9 +13,9 @@ module.exports = {
         $flyoutDiv.css({
             position: 'absolute',
             bottom: 0,
-            left: 0,
-            width: '700px',
-            height: '700px'
+            right: 0,
+            width: '600px',
+            height: '380px'
         });
 
         var animationQueue = [];
@@ -104,8 +104,8 @@ module.exports = {
              */
             fade: function( $div, duration, callback ) {
                 $div.css({
-                    left: 50,
-                    right: 'auto',
+                    left: 'auto',
+                    right: 10,
                     top: 'auto',
                     bottom: 50,
                     opacity: 0
@@ -124,8 +124,8 @@ module.exports = {
              */
             scale: function( $div, duration, callback ) {
                 $div.css({
-                    left: 50,
-                    right: 'auto',
+                    right: 10,
+                    left: 'auto',
                     top: 'auto',
                     bottom: 50,
                     opacity: 0
@@ -154,8 +154,8 @@ module.exports = {
 
             swirl: function( $div, duration, callback ) {
                 $div.css({
-                    left: 50,
-                    right: 'auto',
+                    right: 10,
+                    left: 'auto',
                     top: 'auto',
                     bottom: 50,
                     opacity: 0
@@ -189,7 +189,7 @@ module.exports = {
              */
             flyLeft: function( $div, duration, callback ) {
                 $div.css({
-                    left: '-150%',
+                    left: '-350%',
                     right: 'auto',
                     top: 'auto',
                     bottom: 50,
